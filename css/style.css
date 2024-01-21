@@ -1,0 +1,140 @@
+*{margin: 0; padding: 0; box-sizing: border-box;}
+
+/* TIPOGRAFÍAS UTILIZADAS */
+@font-face {
+    font-family: "Atami";
+    src: url("../fonts/Atami-Regular.otf");
+}
+
+@font-face {
+    font-family: "Warzone";
+    src: url("../fonts/Warzone.otf");
+}
+
+/* COLORES UTILIZAD0S */
+:root {
+    --dark--blue--color: #2D3D73;
+    --medium--blue--color: #5994CE;
+    --lilac--color: #B9B4E3;
+    --yellow--color: #FBF1C3;
+}
+
+img{
+    width: 100%;
+}
+
+p, h3{
+    margin-bottom: 0.5em;
+}
+
+/* FOOTER Y HEADER DESECHADOS DE LA PRIMERA VERSIÓN */
+/* footer{
+    background-color: #2D3D73;
+    width: 100%;
+    height: 4rem;
+}
+
+.header{
+    background-color: #2D3D73;
+    width: 100%;
+    height: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header__logo--img{
+    width: 100%;
+    height: 100%;
+} */
+
+/* FONDO */
+.container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--lilac--color);
+    font-family: "Atami"
+}
+
+/* IMAGEN DE FONDO */
+.container__background--img{
+    object-fit: cover;
+    background-position: center bottom;
+    height: 100vh;
+    mix-blend-mode: overlay; 
+}
+
+/* LOGOTIPO */
+.container__logo{
+    position: absolute;
+    top: 15%;
+    max-width: 40%;
+    min-width: 200px;
+}
+
+/* TEXTO INFORMATIVO */
+.container__info{
+    position: absolute;
+    top: 30%;
+    background-color: #FFFFFF;
+    width: 60%;
+    border-radius: 20px;
+    box-shadow: 10px 10px 70px var(--dark--blue--color);
+    padding: 2rem;
+    opacity: 0.9;
+    text-align: center;
+}
+
+/* CONTENEDOR PARA EL RESPONSIVE DEL MÓVIL */
+.container__mobile{
+    display: none;
+}
+
+/* H1 */
+.container__info--title{
+    color: var(--dark--blue--color);
+    margin-bottom: 1em;
+}
+
+/* TEXTO INFORMATIVO */
+.container__info--text{
+    color: var(--medium--blue--color);
+    line-height: 1.5rem;
+}
+
+/* BOTÓN PARA COMENZAR A JUGAR */
+.btn-play{
+    border-style: none;
+    background-color: var(--dark--blue--color);
+    color: var(--yellow--color);
+    border-radius: 10px;
+    width: 20%;
+    /* Min-height establecido a 45px para que se vea bien en versión móvil */
+    min-height: 45px; 
+    min-width: 90px;
+    padding: 1rem;
+    margin-top: 1rem;
+    font-family: "Warzone";
+    text-align: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width:760px){
+    .container__info{
+        width: 80%;
+    }
+    .container__info--title{
+        display: none;
+    }
+    .container__responsive{
+        display: none;
+    }
+    .container__mobile{
+        display: block;
+    }
+}

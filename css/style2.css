@@ -1,0 +1,239 @@
+*{margin: 0; padding: 0; box-sizing: border-box;}
+
+/* TIPOGRAFÍA UTILIZADA */
+@font-face {
+    font-family: "Warzone";
+    src: url("../fonts/Warzone.otf");
+}
+
+/* COLORES UTILIZAD0S */
+:root {
+    --dark--blue--color: #2D3D73;
+    --medium--blue--color: #5994CE;
+    --lilac--color: #B9B4E3;
+    --light--lilac--color: #EAE8FB;
+    --magenta--color: #B957CE;
+    --yellow--color: #FBF1C3;
+    --yellow--color--transparency30: rgba(251,241,195,0.3);
+}
+
+img{
+    width: 100%;
+}
+
+/* FONDO */
+.container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--lilac--color);
+    font-family: "Warzone"
+}
+
+/* IMAGEN DE FONDO */
+.container__background--img{
+    object-fit: cover;
+    background-position: center bottom;
+    height: 100vh;
+    mix-blend-mode: overlay; 
+    opacity: 0.5;
+}
+
+/* CONTENEDOR DEL MINIJUEGO */
+.container__minigame{
+    position: absolute;
+    width: 90%;
+    height: 90vh;
+    border-radius: 20px;
+    border: solid 1px var(--dark--blue--color);
+    box-shadow: 3px -30px 80px var(--dark--blue--color) inset;
+    text-align: center;
+    background-image: url("../img/background2.jpg");
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* CONTENEDOR DE RECURSOS */
+.container__minigame--resources{
+    z-index: 1;
+    background-color: var(--yellow--color--transparency30);
+    color: #FFFFFF;
+    border-radius: 0px 0px 20px 20px;
+    border: solid 2px var(--yellow--color);
+    box-shadow: 5px 5px 60px var(--yellow--color);
+    width: 60%;
+    min-width: 380px;
+    height: 6rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* CAJA DE RECURSO */
+.resources__box{
+    background-color: var(--light--lilac--color);
+    border-radius: 15px;
+    border: solid 2px var(--yellow--color);
+    min-width: 5.5rem;
+    min-height: 3.5rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 1em;
+    color: var(--dark--blue--color);
+}
+
+/* ICONO DE RECURSO */
+.resources__box--icon{
+    width: 2rem;
+}
+
+/* CONTENEDOR DEL PLANETA */
+.container__planet{
+    position: absolute;
+    top: 14%;
+    width: 90%;
+    height: 60%;
+}
+
+/* ICONO PLANETA */
+.planet{
+    position: absolute;
+    top: 30%;
+    transform: rotate(55deg);
+    transition: opacity 1s;
+    width: 15%;
+    min-width: 3rem;
+    cursor: pointer;
+}
+
+/* CONTENEDOR DE NAVES */
+.container__minigame--ships{
+    position: absolute;
+    left: 5%;
+    bottom: 6%;
+    background-color: var(--light--lilac--color);
+    border-radius: 20px;
+    border: solid 3px var(--magenta--color);
+    box-shadow: 3px 3px 15px var(--magenta--color);
+    min-width: 6rem;
+    min-height: 9rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 1.5em;
+    color: var(--dark--blue--color);
+}
+
+/* ICONO DE NAVE */
+.ships__box--icon{
+    width: 3.5rem;
+}
+
+/* BOTÓN CONSTRUIR NAVE */
+.container__minigame--button{
+    position: absolute;
+    bottom: 6%;
+    background-color: var(--light--lilac--color);
+    border-radius: 20px;
+    border: solid 2px var(--yellow--color);
+    box-shadow: 5px 5px 60px var(--yellow--color);
+    width: 3.5rem;
+    min-width: 5.5rem;
+    padding: 1rem;
+    opacity: 0.5;
+    
+}
+
+/* CONTENEDOR DE LEYENDA DE RECURSOS */
+.container__minigame--hint{
+    position: absolute;
+    right: 5%;
+    bottom: 6%;
+    background-color: var(--light--lilac--color);
+    border-radius: 20px;
+    border: solid 3px var(--magenta--color);
+    box-shadow: 3px 3px 15px var(--magenta--color);
+    min-width: 6rem;
+    min-height: 9rem;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    font-size: 1em;
+    color: var(--dark--blue--color);
+}
+
+/* CAJA DE RECURSO */
+.hint__box--resources{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+/* RESPONSIVE PANTALLAS MEDIANAS*/
+@media screen and (max-width:960px){
+    p{
+        display: none;
+    }
+    .resources__box--icon{
+        width: 1.5rem;
+    }
+    .container__minigame--ships{
+        min-width: 5rem;
+        min-height: 8rem;
+        font-size: 1em;
+    }
+    .ships__box--icon{
+        width: 2.5rem;
+    }
+    .container__minigame--button{
+        min-width: 4.5rem;
+    }
+    .container__minigame--hint{
+        min-width: 5rem;
+        min-height: 8rem;
+    }
+}
+
+/* RESPONSIVE MOBILE*/
+@media screen and (max-width:570px) {
+    .container__minigame--resources{
+        width: 70%;
+        min-width: 250px;
+        font-size: 0.9em;
+    }
+    .resources__box{
+        min-width: 4rem;
+        min-height: 3rem;
+    }
+    .resources__box--icon{
+        width: 1.3rem;
+    }
+    .container__minigame--ships{
+        min-width: 4.5rem;
+        min-height: 6.5rem;
+        font-size: 0.9em;
+    }
+    .ships__box--icon{
+        width: 2rem;
+    }
+    .container__minigame--button{
+        min-width: 4rem;
+    }
+    .container__minigame--hint{
+        min-width: 4.5rem;
+        min-height: 6.5rem;
+        font-size: 0.9em;
+    }
+}
+
+
+

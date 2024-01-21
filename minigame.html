@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style2.css">
+    <script src="js/fun2.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <!-- CONTENEDOR GENERAL -->
+    <div class="container">
+        <audio src="./audio/minigame_music.mp3" loop autoplay></audio>
+        <picture class="container__background">
+            <source media="(min-width: 590px)" srcset="img/background.jpg">
+            <source media="(min-width: 380px)" srcset="img/background_mobile.jpg">
+            <img class="container__background--img" src="img/background_1280.jpg" alt="imagen de fondo">
+        </picture> 
+        <!-- CONTENEDOR DEL MINIJUEGO -->
+        <div class="container__minigame">
+            <!-- RECURSOS -->
+            <div class="container__minigame--resources">
+                <p>TUS RECURSOS</p>
+                <div class="resources__box">
+                    <div class="resources__box--icon">
+                        <img src="./vector/power.svg" title="Resource: power" alt="icono de Power">
+                    </div>
+                    <span class="counter__power">0</span>
+                </div>
+                <div class="resources__box">
+                    <div class="resources__box--icon">
+                        <img src="./vector/chip.svg" title="Resource: chip" alt="icono de Chip">
+                    </div>
+                    <span class="counter__chip">0</span>
+                </div>
+                <div class="resources__box">
+                    <div class="resources__box--icon">
+                        <img src="./vector/crystal.svg" title="Resource: crystal" alt="icono de Crystal">
+                    </div>
+                    <span class="counter__crystal">0</span>
+                </div>
+            </div>
+            <!-- CONTENEDOR DE PLANETAS -->
+            <div class="container__planet">
+                <img class="planet" src="./vector/planet.svg" alt="Planeta">
+            </div>
+            <!-- CONTADOR DE NAVES -->
+            <div class="container__minigame--ships">
+                <span class="ships__box--counter">1</span>
+                <div class="ships__box--icon">
+                    <img src="./vector/spaceship.svg" alt="icono de nave espacial">
+                </div>
+            </div>
+            <!-- BOTÓN PARA CONSTRUIR NAVE -->
+            <button class="container__minigame--button">
+                <img src="./vector/build.svg" alt="Construir nave">
+            </button>
+            <!-- LEYENDA DE RECURSOS NECESARIOS -->
+            <div class="container__minigame--hint">
+                <div class="hint__box--resources">
+                    <img class="resources__box--icon" src="./vector/power_counter.svg" alt="Coste de Power">
+                    <span class="hint__box--resources power">10</span>  
+                </div>
+                <div class="hint__box--resources">
+                    <img class="resources__box--icon" src="./vector/chip_counter.svg" alt="Coste de Chips">
+                    <span class="hint__box--resources chip">10</span>
+                </div>
+                <div class="hint__box--resources">
+                    <img class="resources__box--icon" src="./vector/crystal_counter.svg" alt="Coste de Crystal">
+                    <span class="hint__box--resources crystal">10</span> 
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

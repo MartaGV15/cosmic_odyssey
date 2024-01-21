@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/fun.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <!-- HEADER (primera versión) -->
+    <!-- <header class="header">
+        <div class="header__logo">
+            <img class="header__logo--img" src="vector/logo_light.svg" alt="imagen logo">
+        </div>
+    </header> -->
+
+    <!-- CONTENIDO -->
+    <section class="container">
+        <picture class="container__background">
+            <source media="(min-width: 590px)" srcset="img/background.jpg">
+            <source media="(min-width: 380px)" srcset="img/background_mobile.jpg">
+            <img class="container__background--img" src="img/background_1280.jpg" alt="imagen de fondo">
+        </picture>
+        <div class="container__logo"><img class="container__logo--img" src="vector/logo_claim_dark.svg" alt="imagen logo con claim"></div>
+        <!-- CONTENIDO PARA PANTALLA GRANDE -->
+        <div class="container__info container__responsive"> 
+            <h1 class="container__info--title">¡Embárcate en una emocionante aventura intergaláctica!</h1>
+            <div class="container__info--text">
+                <p>Pilota tu nave a través del vasto espacio y explora planetas en busca de valiosos materiales para construir tu flota. ¿Estás listo para la misión?</p>
+                <h3>¿Cómo funciona?</h3>
+                Comenzarás tu viaje con una nave, a la que tendrás que enviar de exploración cuando surja un nuevo planeta, pulsando en él. <br> Recolecta materiales y cuando tengas los suficientes podrás construir más naves.</p>
+                <p>¿Tienes lo necesario para convertirte en el mejor explorador de la galaxia? ¡Descúbrelo en Cosmic Odyssey!</p>
+            </div>
+            <div class="container__info--button">
+                <button class="btn-play">JUGAR</button>
+                <audio class="button_sound" src="./audio/sound_effect.mp3"></audio>
+            </div>
+                
+            </a>
+        </div>  
+        <!-- CONTENIDO PARA PANTALLA PEQUEÑA -->
+        <div class="container__info container__mobile">
+            <h1 class="container__info--title">¡Embárcate en una emocionante aventura intergaláctica!</h1>
+            <div class="container__info--text">
+                Comienza tu viaje con una nave, a la que tendrás que enviar de exploración cuando surja un nuevo planeta, pulsando en él. <br> Recolecta materiales y cuando tengas los suficientes podrás construir más naves.</p>
+                <p>¿Tienes lo necesario para convertirte en el mejor explorador de la galaxia? ¡Descúbrelo en Cosmic Odyssey!</p>
+            </div>
+            <div class="container__info--button">
+                <button class="btn-play">JUGAR</button>
+                <audio class="button_sound" src="./audio/sound_effect.mp3"></audio>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER (primera versión) -->
+    <!-- <footer></footer> -->
+</body>
+</html>
